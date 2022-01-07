@@ -1,0 +1,95 @@
+.about {
+    margin: 100px auto;
+    position: relative;
+    height: 70vh;
+
+    &__title {
+        font-size: 36px;
+        font-weight: 700;
+        position: absolute;
+        top: 150px;
+        left: 360px;
+        z-index: 100;
+
+        &__link {
+            font-size: 36px;
+            font-weight: 700;
+            color: $black;
+            letter-spacing: 2.3px;
+
+            
+            span {
+                font-size: 42px;
+                font-family: $additional-font-family;
+                color: #504E4E;
+                letter-spacing: 2.6px;
+            }
+        }
+
+    }
+
+    &__column {
+        position: relative;
+    }
+
+    &__item1, &__item2 {
+        font-family: $additional-font-family;
+        font-size: 15px;
+        width: 280px;
+        line-height: 25px;
+        letter-spacing: 1.26px;
+
+        &::before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: $black;
+            position: absolute;
+            top: 10px;
+            left: -30px;
+        }
+    }
+    
+    &__item1 {
+        position: absolute;
+        top: 280px;
+        left: 95px;
+        z-index: 111;
+    }
+
+    &__item2 {
+        position: absolute;
+        top: 450px;
+        right: -50px;
+        z-index: 111;
+    }
+
+    &__blocks {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__picture1 {
+        position: absolute;
+        top: 20px;
+        left: 212px;
+        z-index: 99;
+    }
+
+    &__picture2 {
+        position: absolute;
+        top: 215px;
+        left: 615px;
+    }
+
+    &__greenbox {
+        position: absolute;
+        width: 309px;
+        height: 418px;
+        background-color: rgba(76, 175, 80, 0.8);
+        top: 80px;
+        left: 403px;
+        z-index: 2;
+    }
+}

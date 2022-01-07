@@ -1,0 +1,89 @@
+.service {
+    padding: 130px 0 135px;
+    background-color: $bg-service-color;
+    position: relative;
+
+    &__header {
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: $service-color;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 45px;
+            height: 2px;
+            background-color: $service-color;
+            bottom: -7px;
+            left: 0;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 95px;
+    }
+
+    &__card {
+        background-color: $white;
+        max-width: 373px;
+        padding: 50px 20px 35px;
+        transition: $trs;
+
+        &:not(:last-child) {
+            margin-right: 28px;
+        }
+
+        &:hover {
+            border-bottom: 3px solid $primary-color;
+        }
+    }
+
+    &__titile {
+        font-size: 20px;
+        font-weight: 300;
+        text-transform: uppercase;
+        line-height: 1.9;
+        letter-spacing: 1.3px;
+        position: relative;
+        color: $service-color;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 2px;
+            background-color: $service-color;
+            bottom: -7px;
+            left: 0;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        font-family: $additional-font-family;
+        line-height: 1.6;
+        letter-spacing: 1px;
+        max-width: 280px;
+        margin-top: 20px;
+    }
+
+    &__cardlink {
+        display: block;
+        font-size: 10px;
+        font-weight: 300;
+        text-transform: uppercase;
+        line-height: 0.9;
+        letter-spacing: 0.6px;
+        margin-top: 20px;
+        transition: $trs;
+
+        &:hover {
+            color: $black;
+        }
+    }
+}

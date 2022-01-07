@@ -1,0 +1,41 @@
+.contacts {
+    width: 100%;
+    display: flex;
+    
+    &__work {
+        width: 50%;
+        text-align: center;
+        background-color: $bg-service-color;
+    }
+
+    &__us {
+        width: 50%;
+        text-align: center;
+        background-color: $bg-contacts-us;
+    }
+
+    &__img {
+        margin-top: 70px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 2.2;
+        letter-spacing: 2.6px;
+        color: $additional-text;
+    
+        &--white {
+            color: $white;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        font-family: $additional-font-family;
+        line-height: 1;
+        letter-spacing: 1.5px;
+        margin: 22px auto 100px;
+        color: $text-subtitle;
+    }
+}

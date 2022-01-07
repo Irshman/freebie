@@ -1,0 +1,59 @@
+.footer {
+    background-color: $footer-bg;
+    text-align: center;
+    color: $text-color;
+
+    &__info {
+        display: block;
+        padding-top: 142px;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.2;
+        letter-spacing: 0.8px;
+        
+
+        a {
+            transition: $trs;
+        
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    &__email {
+        display: block;
+        margin: 10px auto 40px;
+    }
+
+    &__social {
+        font-size: 26px;
+        padding-bottom: 82px;
+    }
+
+    &__link {
+        margin: 0 11px;
+        transition: $trs;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &__company {
+        background-color: $service-color;
+        padding: 20px 0;
+    }
+
+    &__subinfo {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.2;
+        letter-spacing: 0.8px;
+        transition: $trs;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}

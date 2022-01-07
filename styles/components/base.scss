@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    &:before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: $main-font-family;
+    color: $text-color;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+    cursor: pointer;
+}
+
+.wrapper {
+    max-width: 100%;
+}
+
+.conteiner {
+    max-width: 62%; // 1173px
+    margin: 0 auto;
+}
+

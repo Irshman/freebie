@@ -1,0 +1,153 @@
+.works {
+    height: 1800px;
+    margin-top: 100px;
+
+    &__header {
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: $service-color;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 45px;
+            height: 2px;
+            background-color: $service-color;
+            bottom: -7px;
+            left: 0;
+        }
+    }
+
+    &__menu {
+        margin-top: 50px;
+    }
+
+    &__list {
+        display: flex;
+        font-size: 14px;
+        font-family: $additional-font-family;
+        line-height: 1;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+    }
+
+    &__item {
+        color: rgba($service-color, 0.3);
+        transition: $trs;
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        &--active {
+            color: $black;
+            opacity: 1;
+        }
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+
+    &__blocks {
+        position: relative;
+    }
+    
+
+    &__block {
+        position: absolute;
+        
+
+        &--one {
+            top: -117px;
+            right: 0;
+        }
+
+        &--two {
+            top: 270px;
+            left: 0;
+        }
+
+        &--three {
+            top: 660px;
+            right: 0;
+        }
+
+        &--four {
+            top: 1050px;
+            left: 0;
+        }
+
+        &_wrap {
+            position: relative;
+        }
+
+        &_title {
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: $service-color;
+            position: absolute;
+            transition: $trs;
+
+            &:hover {
+                text-decoration: line-through;
+                text-decoration-color: $primary-color;
+            }
+
+            &--left {
+                top: 50%;
+                left: -30%;
+                width: 420px;
+            }
+
+            &--right {
+                top: 50%;
+                right: -30%;
+                width: 295px;
+            }
+        }
+
+        &_info {
+            width: 336px;
+
+            &--right {
+                text-align: right;
+                margin: 20px auto 0 0;
+            }
+
+            &--left {
+                text-align: left;
+                margin: 20px 0 0 auto;
+            }
+        }
+
+        &_subtitle {
+            font-size: 18px;
+            font-family: $additional-font-family;
+            letter-spacing: 1.2px;
+        }
+
+        &_text {
+            font-size: 13px;
+            font-family: $additional-font-family;
+            letter-spacing: 0.8px;
+            color: $text-subtitle;
+            margin-top: 17px;
+        }
+    }
+
+    &__more {
+        position: absolute;
+        top: 1573px;
+        right: 0;
+        font-weight: 700;
+        transition: $trs;
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+}
