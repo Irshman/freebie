@@ -95,6 +95,9 @@ a {
   background-image: linear-gradient(177.86deg, #000000 -41.81%, rgba(0, 0, 0, 0.0001) 82.48%);
   opacity: 0.8;
 }
+.main__gradient img {
+  width: 100%;
+}
 .main__list {
   position: absolute;
   display: flex;
