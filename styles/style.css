@@ -76,6 +76,7 @@ a {
 .main {
   height: 100vh;
   margin-bottom: 100px;
+  position: relative;
 }
 .main__gradient {
   position: relative;
@@ -95,7 +96,7 @@ a {
   background-image: linear-gradient(177.86deg, #000000 -41.81%, rgba(0, 0, 0, 0.0001) 82.48%);
   opacity: 0.8;
 }
-.main__gradient img {
+.main__bg {
   width: 100%;
 }
 .main__list {
