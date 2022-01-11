@@ -10,6 +10,10 @@
         font-weight: 300;
         line-height: 1.2;
         letter-spacing: 0.8px;
+
+        @media (max-width: $breakpoints480) {
+            padding-top: 71px;
+        }
         
 
         a {
@@ -29,6 +33,10 @@
     &__social {
         font-size: 26px;
         padding-bottom: 82px;
+
+        @media (max-width: $breakpoints480) {
+            padding-bottom: 41px;
+        }
     }
 
     &__link {
@@ -43,6 +51,10 @@
     &__company {
         background-color: $service-color;
         padding: 20px 0;
+
+        @media (max-width: $breakpoints480) {
+            padding: 10px 0;
+        }
     }
 
     &__subinfo {

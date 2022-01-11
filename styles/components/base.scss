@@ -6,6 +6,10 @@
     }
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     font-family: $main-font-family;
@@ -37,5 +41,15 @@ a {
 .conteiner {
     max-width: 62%; // 1173px
     margin: 0 auto;
+
+    @media (max-width: $breakpoints1024) {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    @media (max-width: $breakpoints768) {
+        max-width: 90%;
+        margin: 0 auto;
+    }
 }
 

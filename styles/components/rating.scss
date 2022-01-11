@@ -7,7 +7,7 @@
         font-family: $additional-font-family;
         line-height: 1.9;
         letter-spacing: 0.9px;
-        width: 735px;
+        max-width: 735px;
         margin: 0 auto 31px;
         color: $service-color;
     }
@@ -26,7 +26,7 @@
     }
 
     &__line {
-        width: 511px;
+        max-width: 511px;
         height: 1px;
         color: #d8d8d8;
         opacity: 0.3;

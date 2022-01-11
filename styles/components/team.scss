@@ -3,6 +3,18 @@
     background-color: $bg-service-color;
     position: relative;
 
+    @media (max-width: $breakpoints1280) {
+        padding: 100px 0;
+    }
+
+    @media (max-width: $breakpoints768) {
+        padding: 50px 0;
+    }
+
+    @media (max-width: $breakpoints480) {
+        padding: 25px 0;
+    }
+
     &__header {
         font-size: 48px;
         font-weight: 700;
@@ -19,6 +31,10 @@
             bottom: -7px;
             left: 0;
         }
+
+        @media (max-width: $breakpoints480) {
+            font-size: 38px;
+        }
     }
 
     &__cards {
@@ -26,6 +42,12 @@
         flex-direction: row;
         justify-content: space-around;
         margin-top: 75px;
+
+        @media (max-width: $breakpoints768) {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 35px;
+        }
     }
 
     &__card {
@@ -41,6 +63,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        @media (max-width: $breakpoints768) {
+            width: 100%;
+            margin: 15px auto;
         }
     }
 

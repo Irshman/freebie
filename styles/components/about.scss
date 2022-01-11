@@ -1,15 +1,34 @@
 .about {
     margin: 100px auto;
     position: relative;
-    height: 70vh;
+
+    @media (max-width: $breakpoints768) {
+        margin: 35px auto;
+    }
+
+    @media (max-width: $breakpoints1280) {
+        margin: 50px auto;
+    }
 
     &__title {
-        font-size: 36px;
         font-weight: 700;
         position: absolute;
         top: 150px;
         left: 360px;
         z-index: 100;
+
+        @media (max-width: $breakpoints1440) {
+            left: 245px;
+        }
+
+        @media (max-width: $breakpoints1280) {
+            left: 160px;
+        }
+
+        @media (max-width: $breakpoints1024) {
+            position: static;
+            margin-bottom: 15px;
+        }
 
         &__link {
             font-size: 36px;
@@ -17,12 +36,28 @@
             color: $black;
             letter-spacing: 2.3px;
 
+            @media (max-width: $breakpoints1280) {
+                font-size: 32px;
+            }
+
+            @media (max-width: $breakpoints768) {
+                font-size: 26px;
+            }
+
             
             span {
                 font-size: 42px;
                 font-family: $additional-font-family;
                 color: #504E4E;
                 letter-spacing: 2.6px;
+
+                @media (max-width: $breakpoints1280) {
+                    font-size: 36px;
+                }
+
+                @media (max-width: $breakpoints768) {
+                    font-size: 30px;
+                }
             }
         }
 
@@ -30,6 +65,12 @@
 
     &__column {
         position: relative;
+
+        @media (max-width: $breakpoints1024) {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
     }
 
     &__item1, &__item2 {
@@ -38,6 +79,20 @@
         width: 280px;
         line-height: 25px;
         letter-spacing: 1.26px;
+
+        @media (max-width: $breakpoints480) {
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            line-height: normal;
+        }
+
+    }
+    
+    &__item1 {
+        position: absolute;
+        top: 280px;
+        left: 95px;
+        z-index: 111;
 
         &::before {
             content: '';
@@ -48,13 +103,18 @@
             top: 10px;
             left: -30px;
         }
-    }
-    
-    &__item1 {
-        position: absolute;
-        top: 280px;
-        left: 95px;
-        z-index: 111;
+
+        @media (max-width: $breakpoints1440) {
+            left: -25px;
+        }
+
+        @media (max-width: $breakpoints1024) {
+            position: static;
+
+            &::before {
+                display: none;
+            }
+        }
     }
 
     &__item2 {
@@ -62,34 +122,48 @@
         top: 450px;
         right: -50px;
         z-index: 111;
+
+        &::before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: $black;
+            position: absolute;
+            top: 10px;
+            left: -30px;
+        }
+
+        @media (max-width: $breakpoints1440) {
+            right: -190px;
+            top: 420px;
+        }
+
+        @media (max-width: $breakpoints1024) {
+            position: static;
+
+            &::before {
+                display: none;
+            }
+        }
     }
 
     &__blocks {
         display: flex;
         justify-content: center;
-        position: relative;
-    }
+        margin: 0 auto;
 
-    &__picture1 {
-        position: absolute;
-        top: 20px;
-        left: 212px;
-        z-index: 99;
-    }
+        @media (max-width: $breakpoints768) {
+            
+            img {
+                width: 450px;
+            }
+        }
 
-    &__picture2 {
-        position: absolute;
-        top: 215px;
-        left: 615px;
-    }
-
-    &__greenbox {
-        position: absolute;
-        width: 309px;
-        height: 418px;
-        background-color: rgba(76, 175, 80, 0.8);
-        top: 80px;
-        left: 403px;
-        z-index: 2;
+        @media (max-width: $breakpoints480) {
+            
+            img {
+                width: 300px;
+            }
+        }
     }
 }

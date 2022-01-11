@@ -1,47 +1,132 @@
 .main {
-    height: 100vh;
-    margin-bottom: 100px;
     position: relative;
+    background-image: url(../../img/main__bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
 
-    &__gradient {
-        position: relative;
-        display: block;
-        line-height: 0;
-        cursor: default;
+    @media (max-width: $breakpoints1024) {
+        margin-bottom: 50px;
+    }
 
-        &::after {
-            content: "";
-            display: block;    
+    &__bg {
+        
+
+        &--img {
             width: 100%;
-            height: 100%;    
-            position: absolute;
-            top: 0;      
-            left: 0;   
-            background: transparent;
-            background-image: linear-gradient(177.86deg, #000000 -41.81%, rgba(0, 0, 0, 0.0001) 82.48%);
-            opacity: 0.8;
         }
     }
+
+    &__menu {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__burger {
+        display: none;
+        margin: 20px 30px 0 0;
+
+        @media (max-width: $breakpoints768) {
+            display: block;
+            position: relative;
+            width: 35px;
+            height: 20px;
+            z-index: 9999999;
+
+            &::before {
+                content: "";
+                background-color: $white;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                top: 0;
+                left: 0;
+            }
+
+            span {
+                content: "";
+                background-color: $white;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                top: 11px;
+            }
+
+            &::after {
+                content: "";
+                background-color: $white;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                top: 23px;
+            }
+
+            &--active {
+                position: fixed;
+                &::before {
+                    transform: rotate(45deg);
+                    top: 12px;
+                    transition: $trs;
+                }
     
-    &__bg {
-        width: 100%;
+                span {
+                    display: none;
+                    transition: $trs;
+                }
+    
+                &::after {
+                    transform: rotate(-45deg);
+                    top: 12px;
+                    transition: $trs;
+                }
+            }
+
+        }
+
+        
     }
 
     &__list {
-        position: absolute;
         display: flex;
         color: $white;
-        top: 0;
-        right: 200px;
         font-weight: 400;
         line-height: 1.3;
         letter-spacing: 2px;
+
+        @media (max-width: $breakpoints768) {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            background-color: $black;
+            z-index: 99999;
+            padding-top: 100px;
+
+        }
+
+        &--active {
+            top: 0;
+        }
     }
 
     &__item {
         margin: 50px 29px 0;
-        position: relative;
         transition: $trs;
+        position: relative;
+
+        @media (max-width: $breakpoints1440) {
+            margin: 35px 20px 0;
+        }
+
+        @media (max-width: $breakpoints1280) {
+            margin: 25px 10px 0;
+        }
+
+        @media (max-width: $breakpoints768) {
+            font-size: 38px;
+            margin-left: 40%;
+        }
 
         &::after {
             content: "";
@@ -49,12 +134,21 @@
             width: 18px;
             height: 2px;
             right: 2px;
-            top: 22px;
+            top: 24px;
             background-color: $primary-color;
+
+            @media (max-width: $breakpoints768) {
+                display: none;
+            }
         }
 
         
         &--active {
+
+            @media (max-width: $breakpoints768) {
+                color: $primary-color;
+            }
+
             &::after {
                 width: 100%;
             }
@@ -67,21 +161,28 @@
     }
 
     &__info {
-        margin: 0 auto;
-        position: absolute;
-        top: 300px;
-        left: auto;
-        right: auto;
+        margin: 285px auto 300px;
     }
 
     &__title {
-        font-size: 72px;
-        display: block;
+        font-size: 70px;
         text-align: center;
         color: $white;
         font-weight: 500;
-        line-height: 106px;
+    
         letter-spacing: .28rem;
+
+        @media (max-width: $breakpoints1440) {
+            font-size: 62px;
+        }
+
+        @media (max-width: $breakpoints1280) {
+            font-size: 52px;
+        }
+
+        @media (max-width: $breakpoints1024) {
+            font-size: 38px;
+        }
     }
 
     &__subtitle {
@@ -94,16 +195,23 @@
         margin: 24px auto 0;
         text-align: center;
         font-family: $additional-font-family;
+
+        @media (max-width: $breakpoints1440) {
+            font-size: 18px;
+        }
+
+        @media (max-width: $breakpoints1024) {
+            margin-top: 0;
+            font-size: 16px;
+        }
     }
 
     &__pages {
         display: flex;
-        position: absolute;
+        position: relative;
         width: 80px;
-        bottom: -10px;
-        left: 0;
-        right: 0;
         margin: auto;
+
     }
 
     &__page {
@@ -113,6 +221,10 @@
         letter-spacing: 0.06rem;
         margin: 0 4px;
         align-self: flex-end;
+
+        @media (max-width: $breakpoints1024) {
+            font-size: 16px;
+        }
 
         a {
             color: rgba(255, 255, 255, 0.437245);
@@ -149,7 +261,25 @@
                 background-color: $primary-color;
                 z-index: -1;
             }
+
+            @media (max-width: $breakpoints1024) {
+                font-size: 28px;
+
+                &::before {
+                    top: 17px;
+                    left: -4px;
+                }
+
+                &::after {
+                    top: 17px;
+                    left: 13px;
+                }
+            }
         }
+    }
+
+    @media (max-width: $breakpoints768) {
+        
     }
 }
 

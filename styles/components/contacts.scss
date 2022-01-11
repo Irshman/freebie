@@ -28,6 +28,11 @@
         &--white {
             color: $white;
         }
+
+        @media (max-width: $breakpoints768) {
+            font-size: 22px;
+            line-height: normal;
+        }
     }
 
     &__text {
@@ -37,5 +42,13 @@
         letter-spacing: 1.5px;
         margin: 22px auto 100px;
         color: $text-subtitle;
+
+        @media (max-width: $breakpoints768) {
+            margin: 10px auto 100px;
+        }
+
+        @media (max-width: $breakpoints480) {
+            margin: 10px auto 50px;
+        }
     }
 }

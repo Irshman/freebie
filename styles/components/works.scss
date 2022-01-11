@@ -1,6 +1,16 @@
 .works {
-    height: 1800px;
+    height: 1850px;
     margin-top: 100px;
+
+    @media (max-width: $breakpoints1024) {
+        height: 1500px;
+        margin-top: 50px;
+    }
+
+    @media (max-width: $breakpoints480) {
+        height: 1650px;
+        margin-top: 50px;
+    }
 
     &__header {
         font-size: 48px;
@@ -18,10 +28,28 @@
             bottom: -7px;
             left: 0;
         }
+
+        @media (max-width: $breakpoints480) {
+            font-size: 38px;
+        }
     }
 
     &__menu {
         margin-top: 50px;
+    }
+
+    &__body {
+        @media (max-width: 1668px) {
+            img {
+                width: 350px;
+            }
+        }
+
+        @media (max-width: $breakpoints1024) {
+            img {
+                width: 250px;
+            }
+        }
     }
 
     &__list {
@@ -31,6 +59,10 @@
         line-height: 1;
         letter-spacing: 0.8px;
         text-transform: uppercase;
+
+        @media (max-width: $breakpoints480) {
+            font-size: 12px;
+        }
     }
 
     &__item {
@@ -49,6 +81,12 @@
         &:hover {
             color: $hover-color;
         }
+
+        @media (max-width: $breakpoints480) {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
     }
 
     &__blocks {
@@ -63,21 +101,57 @@
         &--one {
             top: -117px;
             right: 0;
+
+            @media (max-width: $breakpoints1440) {
+                top: 30px;
+            }
         }
 
         &--two {
             top: 270px;
             left: 0;
+
+            @media (max-width: $breakpoints1440) {
+                top: 395px;
+            }
+
+            @media (max-width: $breakpoints1024) {
+                top: 325px;
+            }
+
+            @media (max-width: $breakpoints480) {
+                top: 385px;
+            }
         }
 
         &--three {
             top: 660px;
             right: 0;
+
+            @media (max-width: $breakpoints1440) {
+                top: 685px;
+            }
+
+            @media (max-width: $breakpoints1024) {
+                top: 620px;
+            }
+
+            @media (max-width: $breakpoints480) {
+                top: 740px;
+            }
         }
 
         &--four {
             top: 1050px;
             left: 0;
+
+            @media (max-width: $breakpoints1024) {
+                top: 910px;
+            }
+
+            @media (max-width: $breakpoints480) {
+                top: 1095px;
+            }
         }
 
         &_wrap {
@@ -97,16 +171,48 @@
                 text-decoration-color: $primary-color;
             }
 
+            @media (max-width: $breakpoints1024) {
+                font-size: 36px;
+            }
+
+            @media (max-width: $breakpoints480) {
+                font-size: 22px;
+            }
+
             &--left {
                 top: 50%;
                 left: -30%;
                 width: 420px;
+                
+                @media (max-width: $breakpoints1024) {
+                    width: 380px;
+                    top: 35%;
+                    left: -60%;
+                }
+
+                @media (max-width: $breakpoints480) {
+                    width: 270px;
+                    left: -30%;
+                }
+
+                
             }
 
             &--right {
                 top: 50%;
                 right: -30%;
                 width: 295px;
+
+                @media (max-width: $breakpoints1024) {
+                    width: 255px;
+                    top: 40%;
+                    right: -60%;
+                }
+
+                @media (max-width: $breakpoints480) {
+                    width: 200px;
+                    right: -50%;
+                }
             }
         }
 
@@ -116,11 +222,23 @@
             &--right {
                 text-align: right;
                 margin: 20px auto 0 0;
+                
+                @media (max-width: $breakpoints480) {
+                    margin: 10px auto 0 0;
+                }
             }
 
             &--left {
                 text-align: left;
                 margin: 20px 0 0 auto;
+
+                @media (max-width: $breakpoints480) {
+                    margin: 10px 0 0 auto ;
+                }
+            }
+
+            @media (max-width: $breakpoints1024) {
+                width: 250px;
             }
         }
 
@@ -128,6 +246,10 @@
             font-size: 18px;
             font-family: $additional-font-family;
             letter-spacing: 1.2px;
+
+            @media (max-width: $breakpoints480) {
+                font-size: 16px;
+            }
         }
 
         &_text {
@@ -148,6 +270,15 @@
 
         &:hover {
             color: $hover-color;
+        }
+
+        @media (max-width: $breakpoints1024) {
+            top: 1300px;
+        }
+
+        @media (max-width: $breakpoints480) {
+            top: 1470px;
+            font-weight: 500;
         }
     }
 }
