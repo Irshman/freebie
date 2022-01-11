@@ -184,6 +184,7 @@ a {
 }
 .main__list--active {
   top: 0;
+  transition: all linear 0.3s;
 }
 .main__item {
   margin: 50px 29px 0;

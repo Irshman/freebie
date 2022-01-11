@@ -107,6 +107,7 @@
 
         &--active {
             top: 0;
+            transition: $trs;
         }
     }
 
