@@ -91,7 +91,7 @@ a {
 
 .main {
   position: relative;
-  background-image: url(../../img/main__bg.png);
+  background-image: url(../../img/main__bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -99,9 +99,6 @@ a {
   .main {
     margin-bottom: 50px;
   }
-}
-.main__bg--img {
-  width: 100%;
 }
 .main__menu {
   display: flex;
