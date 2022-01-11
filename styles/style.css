@@ -201,7 +201,7 @@ a {
 @media (max-width: 769px) {
   .main__item {
     font-size: 38px;
-    margin-left: 40%;
+    margin-left: 100px;
   }
 }
 .main__item::after {
